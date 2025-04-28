@@ -25,8 +25,8 @@ class DigitalClock(QWidget):
         self.setStyleSheet("background-color: black;")
 
         font_id = QFontDatabase.addApplicationFont("DS-DIGIT.TTF")
-        font_family = QFontDatabase.applicationFontFamilies(font_id)[0] # utilizar index para obtener le primer elemento de la familia de fonts
-        my_font = QFont(font_family, 150) #argumentos, font family y tamano en px
+        font_family = QFontDatabase.applicationFontFamilies(font_id)[0] # use index to get the first element from font family
+        my_font = QFont(font_family, 150) #arguments --> font family & size in px
         self.time_label.setFont(my_font)
 
         self.timer.timeout.connect(self.update_time)
